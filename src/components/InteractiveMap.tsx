@@ -10,22 +10,97 @@ interface Place {
   desc: string;
   icon: React.ReactNode;
   color: string;
+  mapUrl?: string;
 }
 
 const PLACES: Place[] = [
   {
     id: 'tech',
-    title: 'Tech Block',
+    title: 'Tech Park',
     desc: 'Main lecture halls & CS departments. Nearest canteen: Block C canteen. Walk 3 mins.',
     icon: <Building className="h-6 w-6" />,
-    color: 'bg-blue-500'
+    color: 'bg-blue-500',
+    mapUrl: 'https://www.google.com/maps/place/Tech+Park+Building,+SRM+University,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8248119,80.042491,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f70ce1c18cd9:0xffb39775f24c16e9!8m2!3d12.8248119!4d80.0450659!16s%2Fg%2F12jss0xrr?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
   },
   {
-    id: 'hostel',
-    title: 'Hostel',
-    desc: 'Hostel complex A & B. Student mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    id: 'paari',
+    title: 'PAARI Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
     icon: <Home className="h-6 w-6" />,
-    color: 'bg-green-500'
+    color: 'bg-green-500',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'mullai',
+    title: 'MULLAI Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-green-600',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'kaari',
+    title: 'KAARI Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-green-700',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'oori',
+    title: 'OORI Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-emerald-500',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'adhiyaman',
+    title: 'ADHIYAMAN Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-emerald-600',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'nelson',
+    title: 'NELSON MANDELA Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-emerald-700',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'manoranjitham',
+    title: 'MANORANJITHAM Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-teal-500',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'sannasi',
+    title: 'SANNASI Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-teal-600',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'agasthiyar',
+    title: 'AGASTHIYAR Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-teal-700',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    id: 'began',
+    title: 'BEGAN Hostel',
+    desc: 'Student hostel with mess timings: 7–10 AM, 12–2 PM, 7–9 PM.',
+    icon: <Home className="h-6 w-6" />,
+    color: 'bg-cyan-500',
+    mapUrl: 'https://www.google.com/maps/place/Paari+Block,+SRM+University,+Dr+Radhakrishnan+Rd,+Potheri,+SRM+Nagar,+Kattankulathur,+Tamil+Nadu+603203/@12.8224045,80.0410501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52f772b79c582d:0xaa78043bb4f67d11!8m2!3d12.8224045!4d80.043625!16s%2Fg%2F12hmxdjrd?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'
   },
   {
     id: 'canteen',
@@ -102,6 +177,17 @@ export const InteractiveMap = () => {
               {selectedPlace?.desc}
             </DialogDescription>
           </DialogHeader>
+          {selectedPlace?.mapUrl && (
+            <div className="flex gap-2 mt-4">
+              <Button
+                onClick={() => window.open(selectedPlace.mapUrl, '_blank')}
+                className="flex items-center gap-2"
+              >
+                <Navigation className="h-4 w-4" />
+                Get Directions
+              </Button>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </>
